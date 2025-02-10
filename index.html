@@ -2,9 +2,8 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
       xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
-
     <center>
-        <img src="./static/my_images/title.png" width="521" height="149"
+        <img src="./static/my_images/logo.jpg" width="521" height="149"
              alt="TextAtlas"/>
         <br/>
     </center>
@@ -34,6 +33,34 @@
 </head>
 <body>
 
+
+    <style>
+        .text-block {
+            background: #f9f9f9;
+            padding: 20px;
+            border-left: 6px solid #007BFF;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #d63384;
+        }
+
+        .key-feature {
+            font-weight: bold;
+            color: #0d6efd;
+        }
+
+        .challenge {
+            font-weight: bold;
+            color: #dc3545;
+        }
+    </style>
+    
+
 <section class="hero">
     <div class="hero-body">
         <div class="container is-max-desktop">
@@ -52,24 +79,29 @@
                      style="text-decoration: none; color: inherit;">Alex Jinpeng Wang</a>,
                 </span>
                         <span class="author-block">
-                  <a href="https://openreview.net/profile?id=~Jiawei_Zhang31"
-                     style="text-decoration: none; color: inherit;">Jiawei Zhang</a>,
+                  Jiawei Zhang,
                 </span>
                         <span class="author-block">
-                  <a href="https://openreview.net/profile?id=~Dongxing_Mao1"
+                  <a href="https://scholar.google.com/citations?user=RLVSYY0AAAAJ&hl=en"
                      style="text-decoration: none; color: inherit;">Dongxing Mao</a>,
                 </span>
                         <br>
-                        <span class="author-block">weiming Han,</span>
+                        <span class="author-block">Weiming Han,</span>
                         <span class="author-block">Zhuobai Dong,</span>
-                        <span class="author-block">Linjie Li,</span>
-                        <span class="author-block">Yiqi Lin,</span>
-                        <span class="author-block">Zhengyuan Yang,</span>
-                        <span class="author-block">Libo Qin,</span>
+                         <a href="https://scholar.google.com/citations?user=WR875gYAAAAJ&hl=en"
+                     style="text-decoration: none; color: inherit;"><span class="author-block">Linjie Li,</span></a>
+                        <span class="author-block"><a href="https://linyq17.github.io"
+                     style="text-decoration: none; color: inherit;"><span class="author-block">Yiqi Lin,</span></a>
+                        <span class="author-block"><a href="https://scholar.google.com/citations?user=rP02ve8AAAAJ&hl=en"
+                     style="text-decoration: none; color: inherit;"><span class="author-block">Zhengyuan Yang,</span></a>
+                        <span class="author-block"><a href="https://scholar.google.co.jp/citations?user=8lVpK1QAAAAJ&hl=zh-CN"
+                     style="text-decoration: none; color: inherit;"><span class="author-block">Libo Qin,</span></a>
                         <span class="author-block">Fuwei Zhang,</span>
-                        <span class="author-block">Lijuan Wang,</span>
-                        <span class="author-block">Min Li</span><br>
-                        <span class="author-block"></span>
+                        <span class="author-block"><span class="author-block"><a href="https://scholar.google.com/citations?user=cDcWXuIAAAAJ&hl=zh-CN"
+                     style="text-decoration: none; color: inherit;"><span class="author-block">Lijuan Wang,</span></a>
+                        <span class="author-block"><a href="https://scholar.google.com/citations?user=w47WJE4AAAAJ&hl=zh-CN"
+                     style="text-decoration: none; color: inherit;"><span class="author-block">Min Li</span></a>
+                     <br>
                     </div>
                     <br>
 
@@ -128,14 +160,16 @@
 
 <section class="hero teaser">
     <div class="container is-max-desktop has-text-centered">
-        <img src="./static/my_images/question.jpg" alt="geometric reasoning">
+        <img src="./static/my_images/text_only_data-1.svg" alt="our observation">
+        <div class="text-block">
         <p>Our observations highlight that previous text-to-image generation methods struggle with rendering dense text.
-            For instance, AnyText
-            renders only a handful of words, while Text Diffuser 2 captures only part of the text.
-            In contrast, GPT-4 with DALL-E 3 demonstrates the best performance in text rendering. </br>
-            <b>These results underscore that dense-text image generation remains a challenging task for current
-                models.</b>
+        For instance, AnyText
+        renders only a handful of words, while Text Diffuser 2 captures only part of the text.
+        In contrast, GPT-4 with DALL-E 3 demonstrates the best performance in text rendering. </br>
+        <b>These results underscore that dense-text image generation remains a challenging task for current
+            models.</b>
         </p>
+    </div>
     </div>
 </section>
 
@@ -147,13 +181,13 @@
                 <h2 class="title is-3">🔔News</h2>
                 <div class="content has-text-justified">
                     <p>
-                        <b>🔥[2025-02-10] Introducing <a href="#">TextAtlas5M</a>, dataset that can be used for training
-                            and have additional test sets for testing multimodal AI 🚀</b>
+                        <b>🔥[2025-02-10] Introducing <a href="#">TextAtlas5M</a>, a dataset designed for training and supplemented with additional test sets for evaluating multimodal generation models. 🚀</b>
                     </p>
                 </div>
                 </br>
                 <h2 class="title is-3">Introduction</h2>
                 <div class="content has-text-justified">
+                    <div class="text-block">
                     <p>
                         We present TextAtlas5M, <b>a large-scale benchmark for text-conditioned
                         image generation, focusing on text-rich images. </b>The
@@ -161,6 +195,9 @@
                         diverse collection of real images, curated from widely
                         relevant real-world topics.
                     </p>
+                </div>
+                    <img src="./static/my_images/compare.jpg" alt="algebraic reasoning" class="center" style="width: 100%; height: auto;">
+                    <div class="text-block">
                     <p>
                         We design <b>a dedicated test set </b>to address the longstanding gap in metrics
                         for evaluating long-text information in image generation. By requiring models to effectively
@@ -178,6 +215,7 @@
                         text-rich image generation in future research.
                     </p>
                 </div>
+                </div>
             </div>
         </div>
 
@@ -189,7 +227,7 @@
     <div class="hero-body has-text-centered">
         <h1 class="title is-1 mmmu">
 
-            <span class="mmmu">Dataset can be used for training</span>
+            <span class="mmmu">TextAtlas5M Training Set</span>
         </h1>
     </div>
 </section>
@@ -200,43 +238,50 @@
             <div class="column is-four-fifths">
                 <h2 class="title is-3">Overview</h2>
                 <div class="content has-text-justified">
+                    <div class="text-block">
                     <p>
-                        We introduce TextAtlas5M, a
-                        comprehensive dataset designed to advance and evaluate
-                        text-to-image generation models, with a particular focus on
-                        generating dense-text images. TextAtlas5M stands out in several key ways compared to previous
-                        text-rich datasets. Unlike earlier datasets,
-                        which primarily focus on short and simple text, TextAtlas5M includes a diverse and complex range
-                        of data. It
-                        spans from interleaved documents and synthetic data to real world images containing dense text,
-                        offering a more varied
-                        and challenging set of examples. Moreover, our dataset features longer text captions, which pose
-                        additional challenges
-                        for models, and includes human annotations for particularly
-                        difficult examples, ensuring a more thorough evaluation of
-                        model capabilities.
+                        We introduce <span class="highlight">TextAtlas5M</span>, a comprehensive dataset designed to advance and evaluate
+                        text-to-image generation models, with a particular focus on generating <span class="key-feature">dense-text images</span>. 
+                        <span class="highlight">TextAtlas5M</span> stands out in several key ways compared to previous text-rich datasets.
+                        Unlike earlier datasets, which primarily focus on <span class="key-feature">short and simple text</span>, 
+                        <span class="highlight">TextAtlas5M</span> includes a diverse and complex range of data. 
+                        It spans from <span class="key-feature">interleaved documents</span> and <span class="key-feature">synthetic data</span> 
+                        to <span class="key-feature">real-world images containing dense text</span>, offering a more varied 
+                        and challenging set of examples. Moreover, our dataset features <span class="challenge">longer text captions</span>, 
+                        which pose additional challenges for models, and includes <span class="challenge">human annotations</span> 
+                        for particularly difficult examples, ensuring a more thorough evaluation of model capabilities.
                     </p>
-                    <img src="./static/my_images/intro-dataset.svg" alt="algebraic reasoning" class="center">
+                </div>
+                   <img src="./static/my_images/intro_dataset-1.svg" alt="algebraic reasoning" class="center" style="width: 100%; height: auto;">
                     <br>
+                    <div class="text-block">
+                <p>
+                    The synthetic subset progresses through <span class="key-feature">three levels of complexity</span>, starting with 
+                    <span class="key-feature">simple text</span> on clean backgrounds. It then advances to 
+                    <span class="key-feature">interleaved data</span>, blending text with visual elements, and culminates in 
+                    <span class="key-feature">synthetic natural images</span>, where realistic scenes integrate seamlessly with text.
+                </p>
+            </div>
+
+                <div class="text-block">
                     <p>
-                        The synthetic subset progresses through three levels of complexity, starting with simple text on
-                        clean backgrounds. It
-                        then advances to interleaved data, blending text with visual
-                        elements, and culminates in synthetic natural images, where
-                        realistic scenes integrate seamlessly with text.
+                        The real image subset captures diverse, real-world <span class="key-feature">dense text scenarios</span>. It includes 
+                        filtered samples from datasets like <span class="highlight">AnyText</span> and <span class="highlight">TextDiffuser</span>, 
+                        detailed descriptions from PowerPoint slides, book covers, and academic PDF papers.
                     </p>
                     <p>
-                        The real image subset captures diverse, real-world dense text scenarios. It includes filtered
-                        samples from datasets
-                        like AnyText and TextDiffuser, detailed descriptions from PowerPoint slides,
-                        book covers, and academic PDF papers. To enrich diversity, we also gather dense text images
-                        guided by predefined
-                        topics from CommonCrawl1 and LAION-5B. To assess the capability of model in dense
-                        text image generation, we introduce a dedicated test set,
-                        TextAtlas5MEval, designed for comprehensive evaluation.
-                        This test set spans four distinct data types, ensuring diversity across domains and enhancing
-                        the relevance of TextAtlas5M for real-world applications.
+                        To enrich diversity, we also gather dense text images guided by predefined topics from 
+                        <span class="highlight">CommonCrawl1</span> and <span class="highlight">LAION-5B</span>. 
+                        To assess the capability of models in dense text image generation, we introduce a dedicated test set, 
+                        <span class="highlight">TextAtlas5MEval</span>, designed for comprehensive evaluation.
                     </p>
+                    <p>
+                        This test set spans <span class="key-feature">four distinct data types</span>, ensuring diversity across domains 
+                        and enhancing the relevance of <span class="highlight">TextAtlas5M</span> for real-world applications.
+                    </p>
+                </div>
+
+                    <img src="./static/my_images/data-display-overall-w-ann-v2.svg" alt="algebraic reasoning" class="center" style="width: 100%; height: auto;">
                 </div>
             </div>
         </div>
@@ -245,7 +290,7 @@
             <div class="column is-full has-text-centered content">
                 <h2 class="title is-3">Statistics</h2>
                 <div class="carousel results-carousel">
-                    <div class="box m-5">
+ <!--                    <div class="box m-5">
                         <div class="content has-text-centered">
                             <img src="./static/my_images/compare.jpg" alt="algebraic reasoning"
                                  width="95%"/>
@@ -253,6 +298,19 @@
                                 text-rich image datasets. Unlike prior datasets with
                                 short or unstructured alt-text, TextAtlas5M features more
                                 diverse, complex long-form text.</p>
+                        </div>
+                    </div> -->
+                    <div class="box m-5">
+                        <div class="content has-text-centered">
+                            <img src="./static/my_images/topic_pie_chart.png" alt="arithmetic reasoning" width="100%"
+                                 height="100%"/>
+                            <p> Topic distribution in StyledTextSynth and TextScenesHQ subset, showcasing a diverse
+                                range of text-rich
+                                topics such as weather reports, banners, and TV shopping ads. StyledTextSynth includes
+                                carefully selected 18 topics, while
+                                TextScenesHQ ultimately contains 26 distinct topics. These topics are generated using
+                                GPT-4 as a world simulator and then
+                                filtered by humans to eliminate overlap while ensuring diversity.</p>
                         </div>
                     </div>
                     <div class="box m-5">
@@ -288,15 +346,11 @@
                     </div>
                     <div class="box m-5">
                         <div class="content has-text-centered">
-                            <img src="./static/my_images/topic_pie_chart.png" alt="arithmetic reasoning" width="100%"
+                            <img src="./static/my_images/clip_score.png" alt="arithmetic reasoning" width="100%"
                                  height="100%"/>
-                            <p> Topic distribution in StyledTextSynth and TextScenesHQ subset, showcasing a diverse
-                                range of text-rich
-                                topics such as weather reports, banners, and TV shopping ads. StyledTextSynth includes
-                                carefully selected 18 topics, while
-                                TextScenesHQ ultimately contains 26 distinct topics. These topics are generated using
-                                GPT-4 as a world simulator and then
-                                filtered by humans to eliminate overlap while ensuring diversity.</p>
+                            <p>
+                                CLIP Score Distribution.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -309,12 +363,13 @@
 <section class="hero is-light is-small">
     <div class="hero-body has-text-centered">
         <h1 class="title is-1 mmmu">
-            <span class="mmmu">Contain test set for comparison</span>
+            <span class="mmmu">TextAtlas5MEval for model evaluation</span>
         </h1>
     </div>
 </section>
 <section class="section">
     <div class="container">
+        <div class="text-block">
         <p>To evaluate the dense-text image generation ability for existing model, we further propose TextAtlas5MEval.
             Adopting stratified random sampling weighted by subset complexity levels: 33% from advanced synthetic tiers
             (Styled-TextSynth), 33% from real-world professional domains
@@ -331,15 +386,16 @@
             assess the capabilities of model across multiple dimensions.
         </p>
     </div>
+    </div>
 
 </section>
 
 
-<section class="hero is-light is-small">
+<!-- <section class="hero is-light is-small">
     <div class="hero-body has-text-centered">
         <h1 class="title is-1 mmmu">Experiment Results</h1>
     </div>
-</section>
+</section> -->
 
 <section class="section">
     <div class="container">
@@ -358,16 +414,15 @@
                 <br>
                 <div class="content has-text-centered">
                     <p>
-                        Long text image generation evaluation over TextAtlas5MEval. F1. is short for F1 score and CS
-                        means CLIP Score.
+                        Long text image generation evaluation over TextAtlas5MEval. Metrics include F1 score (F1), CLIP Score (CS), and Character Error Rate (CER). 
                     </p>
                 </div>
                 <div class="leaderboard-container">
                     <style>
                         .grid-container {
                             display: grid;
-                            grid-template-columns: 1fr 1fr; /* 两列，平分宽度 */
-                            grid-template-rows: auto auto; /* 两行，自动调整高度 */
+                            grid-template-columns: 1fr; /* 两列，平分宽度 */
+                            grid-template-rows: auto auto auto auto; /* 两行，自动调整高度 */
                             gap: 20px; /* 表格之间的间距 */
                             padding: 20px;
                         }
@@ -418,22 +473,22 @@
                                 </tr>
                                 </thead>
                                 <tr>
-                                    <td>Anytext</td>
-                                    <td>2023-11-03</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
+                                    <td>PixArt-Sigma</td>
+                                    <td>2024-03-27</td>
+                                    <td>81.29</td>
+                                    <td>0.1891</td>
+                                    <td>2.40</td>
+                                    <td>1.57</td>
+                                    <td>0.83</td>
                                 </tr>
                                 <tr>
-                                    <td>TextDiffuser2</td>
-                                    <td>2023-11-16</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
+                                    <td>Infinity-2B</td>
+                                    <td>2024-12-05</td>
+                                    <td>95.69</td>
+                                    <td>0.1979</td>
+                                    <td>2.98</td>
+                                    <td>3.44</td>
+                                    <td>0.83</td>
                                 </tr>
                                 <tr>
                                     <td>SD3.5 Large</td>
@@ -463,6 +518,33 @@
                                 </tr>
                                 </thead>
                                 <tr>
+                                    <td>SD3.5 Large</td>
+                                    <td>2024-06-25</td>
+                                    <td>71.09</td>
+                                    <td>0.2849</td>
+                                    <td>27.21</td>
+                                    <td>33.86</td>
+                                    <td>0.73</td>
+                                </tr>
+                                <tr>
+                                    <td>PixArt-Sigma</td>
+                                    <td>2024-03-27</td>
+                                    <td>82.83</td>
+                                    <td>0.2764</td>
+                                    <td>0.42</td>
+                                    <td>0.62</td>
+                                    <td>0.90</td>
+                                </tr>
+                                <tr>
+                                    <td>Infinity-2B</td>
+                                    <td>2024-12-05</td>
+                                    <td>84.95</td>
+                                    <td>0.2727</td>
+                                    <td>0.80</td>
+                                    <td>1.42</td>
+                                    <td>0.93</td>
+                                </tr>
+                                <tr>
                                     <td>Anytext</td>
                                     <td>2023-11-03</td>
                                     <td>117.71</td>
@@ -479,15 +561,6 @@
                                     <td>0.76</td>
                                     <td>1.46</td>
                                     <td>0.99</td>
-                                </tr>
-                                <tr>
-                                    <td>SD3.5 Large</td>
-                                    <td>2024-06-25</td>
-                                    <td>71.09</td>
-                                    <td>0.2849</td>
-                                    <td>27.21</td>
-                                    <td>33.86</td>
-                                    <td>0.73</td>
                                 </tr>
                             </table>
                         </div>
@@ -508,6 +581,33 @@
                                 </tr>
                                 </thead>
                                 <tr>
+                                    <td>SD3.5 Large</td>
+                                    <td>2024-06-25</td>
+                                    <td>64.44</td>
+                                    <td>0.2363</td>
+                                    <td>19.03</td>
+                                    <td>24.45</td>
+                                    <td>0.73</td>
+                                </tr>
+                                <tr>
+                                    <td>PixArt-Sigma</td>
+                                    <td>2024-03-27</td>
+                                    <td>72.62</td>
+                                    <td>0.2347</td>
+                                    <td>0.34</td>
+                                    <td>0.53</td>
+                                    <td>0.91</td>
+                                </tr>
+                                <tr>
+                                    <td>Infinity-2B</td>
+                                    <td>2024-12-05</td>
+                                    <td>71.59</td>
+                                    <td>0.2346</td>
+                                    <td>1.06</td>
+                                    <td>1.74</td>
+                                    <td>0.88</td>
+                                </tr>
+                                <tr>
                                     <td>Anytext</td>
                                     <td>2023-11-03</td>
                                     <td>101.32</td>
@@ -525,60 +625,6 @@
                                     <td>1.25</td>
                                     <td>0.96</td>
                                 </tr>
-                                <tr>
-                                    <td>SD3.5 Large</td>
-                                    <td>2024-06-25</td>
-                                    <td>64.44</td>
-                                    <td>0.2363</td>
-                                    <td>19.03</td>
-                                    <td>24.45</td>
-                                    <td>0.73</td>
-                                </tr>
-                            </table>
-                        </div>
-
-                        <!-- 右下 -->
-                        <div class="grid-item">
-                            <p class="table-title">Metric Comparison Overall</p>
-                            <table id="leadertable-table4">
-                                <thead>
-                                <tr>
-                                    <th>Method</th>
-                                    <th>Date</th>
-                                    <th>FID⬇</th>
-                                    <th>CS⬆</th>
-                                    <th>OCR(Acc.)⬆</th>
-                                    <th>OCR(F1.)⬆</th>
-                                    <th>OCR(Cer.)⬇</th>
-                                </tr>
-                                </thead>
-                                <tr>
-                                    <td>Anytext</td>
-                                    <td>2023-11-03</td>
-                                    <td>109.51</td>
-                                    <td>0.2337</td>
-                                    <td>0.38</td>
-                                    <td>0.73</td>
-                                    <td>0.96</td>
-                                </tr>
-                                <tr>
-                                    <td>TextDiffuser2</td>
-                                    <td>2023-11-16</td>
-                                    <td>99.20</td>
-                                    <td>0.2381</td>
-                                    <td>0.71</td>
-                                    <td>1.35</td>
-                                    <td>0.97</td>
-                                </tr>
-                                <tr>
-                                    <td>SD3.5 Large</td>
-                                    <td>2024-06-25</td>
-                                    <td>84.79</td>
-                                    <td>0.2352</td>
-                                    <td>20.26</td>
-                                    <td>24.85</td>
-                                    <td>0.78</td>
-                                </tr>
                             </table>
                         </div>
                     </div>
@@ -586,7 +632,7 @@
                 </div>
             </div>
         </div>
-        <div class="columns is-centered m-6">
+ <!--        <div class="columns is-centered m-6">
             <div class="column is-full has-text-centered content">
                 <h2 class="title is-3">Clip Score</h2>
                 <div class="content has-text-justified">
@@ -622,16 +668,34 @@
                 </div>
 
             </div>
-        </div>
+        </div> -->
         <div class="columns is-centered m-6">
             <div class="column is-full has-text-centered content">
-                <h2 class="title is-3" id="examples">Examples</h2>
+                <h2 class="title is-3" id="examples">More Examples</h2>
                 <div class="carousel results-carousel">
-                    <div class="box m-5">
+                    <!-- <div class="box m-5">
                         <div class="content has-text-centered">
                             <img src="./static/my_images/data-display-overall-w-ann-v2.svg" alt="grade-lv"
                                  width="100%"/>
                             <p class="bottom-text">Examples Overview</p>
+                        </div>
+                    </div> -->
+                    <div class="box m-5">
+                        <div class="content has-text-centered">
+                            <img src="./static/my_images/long_image_4.jpg" alt="grade-lv" width="60%"/>
+                            <p class="bottom-text">TextScenesHQ Examples_1</p>
+                        </div>
+                    </div>
+                    <div class="box m-5">
+                        <div class="content has-text-centered">
+                            <img src="./static/my_images/long_image_5.jpg" alt="grade-lv" width="60%"/>
+                            <p class="bottom-text">TextScenesHQ Examples_2</p>
+                        </div>
+                    </div>
+                    <div class="box m-5">
+                        <div class="content has-text-centered">
+                            <img src="./static/my_images/long_image_6.jpg" alt="grade-lv" width="80%"/>
+                            <p class="bottom-text">TextScenesHQ Examples_3</p>
                         </div>
                     </div>
                     <div class="box m-5">
@@ -652,24 +716,6 @@
                             <p class="bottom-text">StyledTextSynth Examples_3</p>
                         </div>
                     </div>
-                    <div class="box m-5">
-                        <div class="content has-text-centered">
-                            <img src="./static/my_images/long_image_4.jpg" alt="grade-lv" width="60%"/>
-                            <p class="bottom-text">TextScenesHQ Examples_1</p>
-                        </div>
-                    </div>
-                    <div class="box m-5">
-                        <div class="content has-text-centered">
-                            <img src="./static/my_images/long_image_5.jpg" alt="grade-lv" width="60%"/>
-                            <p class="bottom-text">TextScenesHQ Examples_2</p>
-                        </div>
-                    </div>
-                    <div class="box m-5">
-                        <div class="content has-text-centered">
-                            <img src="./static/my_images/long_image_6.jpg" alt="grade-lv" width="80%"/>
-                            <p class="bottom-text">TextScenesHQ Examples_3</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -679,8 +725,40 @@
 
 <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
+        <h2 class="title is-3 has-text-centered">Potential Applications</h2>
+        <ul class="application-list">
+            <li>📌 Interleaved PowerPoint Generation</li>
+            <li>📌 Text-customized Image Generation</li>
+        </ul>
+    </div>
+</section>
+
+<style>
+    .application-list {
+        list-style-type: none;
+        padding-left: 0;
+        font-size: 18px;
+        margin-top: 10px;
+    }
+    .application-list li {
+        padding: 8px 0;
+        font-weight: bold;
+        color: #333;
+    }
+</style>
+
+
+
+<section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
         <h2 class="title is-3 has-text-centered">BibTeX</h2>
         <pre><code>
+        @inproceedings{wang2025large,
+            title={A Large-scale Dataset for Dense Text Image Generation},
+            author={ Alex Jinpeng Wang and  Jiawei Zhang and Dongxing Mao and weiming Han and Zhuobai Dong and Linjie Li and Yiqi Lin and Zhengyuan Yang and Libo Qin and Fuwei Zhang and Lijuan Wang and Min Li},
+            booktitle={Arxiv},
+            year={2024},
+        }
 
     </code></pre>
     </div>
