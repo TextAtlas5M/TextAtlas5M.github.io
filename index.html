@@ -363,514 +363,226 @@
                     </p>
                 </div>
                 <div class="leaderboard-container">
-                    <div class="table-wrapper">
-<!--                        <div class="carousel results-carousel">-->
-<!--                            <div class="box m-5">-->
-<!--                                <table id="leadertable-table1">-->
-<!--                                    <thead>-->
-<!--                                    <tr>-->
-<!--                                        <th colspan="1" class="reset-cell clickable" style="text-align: center;">-->
-<!--                                            Method-->
-<!--                                        </th>-->
-<!--                                        <th colspan="1" class="reset-cell clickable" style="text-align: center;">Date-->
-<!--                                        </th>-->
-<!--                                        <th class="pro-details-cell clickable" colspan="5">TextVisionBlend</th>-->
-<!--                                    </tr>-->
-<!--                                    <tr>-->
-<!--                                        <th class="sortable clickable" data-sort="string"></th>-->
-<!--                                        <th class="sortable clickable" data-sort="string"></th>-->
-<!--                                        <th class="clickable" data-sort="string">FID⬇</th>-->
-<!--                                        <th class="sortable clickable" data-sort="date">CS⬆</th>-->
-<!--                                        <th class="sortable clickable" data-sort="date">OCR(Acc.)⬆</th>-->
-<!--                                        <th class="sortable clickable" data-sort="date">OCR(F1.)⬆</th>-->
-<!--                                        <th class="sortable clickable" data-sort="date">OCR(Cer.)⬇</th>-->
-<!--                                    </tr>-->
-<!--                                    <tr>-->
-<!--                                        <td class="">Anytext</td>-->
-<!--                                        <td class="">2023-11-03</td>  &lt;!&ndash;日期&ndash;&gt;-->
-<!--                                        <td class="">-</td>-->
-<!--                                        <td class="">-</td>-->
-<!--                                        <td class="">-</td>-->
-<!--                                        <td class="">-</td>-->
-<!--                                        <td class="">-</td>-->
-<!--                                    </tr>-->
-<!--                                    <tr>-->
-<!--                                        <td class="">TextDiffuser2</td>-->
-<!--                                        <td class="">2023-11-16</td>  &lt;!&ndash;日期&ndash;&gt;-->
-<!--                                        <td class="">-</td>-->
-<!--                                        <td class="">-</td>-->
-<!--                                        <td class="">-</td>-->
-<!--                                        <td class="">-</td>-->
-<!--                                        <td class="">-</td>-->
-<!--                                    </tr>-->
-<!--                                    <tr>-->
-<!--                                        <td class="">SD3.5 Large</td>-->
-<!--                                        <td class="">2024-06-25</td>  &lt;!&ndash;日期&ndash;&gt;-->
-<!--                                        <td class="">118.85</td>-->
-<!--                                        <td class="">0.1846</td>-->
-<!--                                        <td class="">14.55</td>-->
-<!--                                        <td class="">16.25</td>-->
-<!--                                        <td class="">0.88</td>-->
-<!--                                    </tr>-->
-<!--                                    </thead>-->
-<!--                                    &lt;!&ndash;                            <tbody>&ndash;&gt;-->
-<!--                                    &lt;!&ndash;                            </tbody>&ndash;&gt;-->
-<!--                                </table>-->
-<!--                            </div>-->
-<!--                            <div class="box m-5">-->
-<!--                                <table id="leadertable-table2">-->
-<!--                                    <thead>-->
-<!--                                    <tr>-->
-<!--                                        <th colspan="1" class="reset-cell clickable" style="text-align: center;">-->
-<!--                                            Method-->
-<!--                                        </th>-->
-<!--                                        <th colspan="1" class="reset-cell clickable" style="text-align: center;">Date-->
-<!--                                        </th>-->
+                    <style>
+                        .grid-container {
+                            display: grid;
+                            grid-template-columns: 1fr 1fr; /* 两列，平分宽度 */
+                            grid-template-rows: auto auto; /* 两行，自动调整高度 */
+                            gap: 20px; /* 表格之间的间距 */
+                            padding: 20px;
+                        }
 
-<!--                                        <th class="val-details-cell clickable" colspan="5">StyledTextSynth</th>-->
+                        .grid-item {
+                            border: 1px solid #ccc;
+                            padding: 10px;
+                            background-color: #f9f9f9;
+                            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+                        }
 
-<!--                                    </tr>-->
-<!--                                    <tr>-->
-<!--                                        <th class="sortable clickable" data-sort="string"></th>-->
-<!--                                        <th class="sortable clickable" data-sort="string"></th>-->
-<!--                                        <th class="clickable" data-sort="string">FID⬇</th>-->
-<!--                                        <th class="sortable clickable" data-sort="date">CS⬆</th>-->
-<!--                                        <th class="sortable clickable" data-sort="date">OCR(Acc.)⬆</th>-->
-<!--                                        <th class="sortable clickable" data-sort="date">OCR(F1.)⬆</th>-->
-<!--                                        <th class="sortable clickable" data-sort="date">OCR(Cer.)⬇</th>-->
-<!--                                    </tr>-->
-<!--                                    <tr>-->
-<!--                                        <td class="">Anytext</td>-->
-<!--                                        <td class="">2023-11-03</td>-->
-<!--                                        <td class="">117.71</td>-->
-<!--                                        <td class="">0.2501</td>-->
-<!--                                        <td class="">0.35</td>-->
-<!--                                        <td class="">0.66</td>-->
-<!--                                        <td class="">0.98</td>-->
-<!--                                    </tr>-->
-<!--                                    <tr>-->
-<!--                                        <td class="">TextDiffuser2</td>-->
-<!--                                        <td class="">2023-11-16</td>  &lt;!&ndash;日期&ndash;&gt;-->
-<!--                                        <td class="">114.31</td>-->
-<!--                                        <td class="">0.2510</td>-->
-<!--                                        <td class="">0.76</td>-->
-<!--                                        <td class="">1.46</td>-->
-<!--                                        <td class="">0.99</td>-->
-<!--                                    </tr>-->
-<!--                                    <tr>-->
-<!--                                        <td class="">SD3.5 Large</td>-->
-<!--                                        <td class="">2024-06-25</td>-->
-<!--                                        <td class="">71.09</td>-->
-<!--                                        <td class="">0.2849</td>-->
-<!--                                        <td class="">27.21</td>-->
-<!--                                        <td class="">33.86</td>-->
-<!--                                        <td class="">0.73</td>-->
-<!--                                    </thead>-->
-<!--                                </table>-->
+                        table {
+                            width: 100%;
+                            border-collapse: collapse;
+                        }
 
-<!--                            </div>-->
-<!--                            <div class="box m-5">-->
-<!--                                <table id="leadertable-table3">-->
-<!--                                    <thead>-->
-<!--                                    <tr>-->
-<!--                                        <th colspan="1" class="reset-cell clickable" style="text-align: center;">-->
-<!--                                            Method-->
-<!--                                        </th>-->
-<!--                                        <th colspan="1" class="reset-cell clickable" style="text-align: center;">Date-->
-<!--                                        </th>-->
-<!--                                        <th class="test-details-cell clickable" colspan="5">TextScenesHQ</th>-->
-<!--                                    </tr>-->
-<!--                                    <tr>-->
-<!--                                        <th class="sortable clickable" data-sort="string"></th>-->
-<!--                                        <th class="sortable clickable" data-sort="string"></th>-->
-<!--                                        <th class="clickable" data-sort="string">FID⬇</th>-->
-<!--                                        <th class="sortable clickable" data-sort="date">CS⬆</th>-->
-<!--                                        <th class="sortable clickable" data-sort="date">OCR(Acc.)⬆</th>-->
-<!--                                        <th class="sortable clickable" data-sort="date">OCR(F1.)⬆</th>-->
-<!--                                        <th class="sortable clickable" data-sort="date">OCR(Cer.)⬇</th>-->
-<!--                                    </tr>-->
-<!--                                    <tr>-->
-<!--                                        <td>Anytext</td>-->
-<!--                                        <td class="">2023-11-03</td>-->
-<!--                                        <td class="">101.32</td>-->
-<!--                                        <td class="">0.2174</td>-->
-<!--                                        <td class="">0.42</td>-->
-<!--                                        <td class="">0.80</td>-->
-<!--                                        <td class="">0.95</td>-->
-<!--                                    </tr>-->
-<!--                                    <tr>-->
-<!--                                        <td>TextDiffuser2</td>-->
-<!--                                        <td class="">2023-11-16</td>  &lt;!&ndash;日期&ndash;&gt;-->
-<!--                                        <td class="">84.10</td>-->
-<!--                                        <td class="">0.2252</td>-->
-<!--                                        <td class="">0.66</td>-->
-<!--                                        <td class="">1.25</td>-->
-<!--                                        <td class="">0.96</td>-->
-<!--                                    </tr>-->
-<!--                                    <tr>-->
-<!--                                        <td class="">SD3.5 Large</td>-->
-<!--                                        <td class="">2024-06-25</td>  &lt;!&ndash;日期&ndash;&gt;-->
-<!--                                        <td class="">64.44</td>-->
-<!--                                        <td class="">0.2363</td>-->
-<!--                                        <td class="">19.03</td>-->
-<!--                                        <td class="">24.45</td>-->
-<!--                                        <td class="">0.73</td>-->
-<!--                                    </tr>-->
-<!--                                    </thead>-->
-<!--                                </table>-->
-<!--                            </div>-->
-<!--                            <div class="box m-5">-->
-<!--                                <table id="leadertable-table4">-->
-<!--                                    <thead>-->
-<!--                                    <tr>-->
-<!--                                        <th colspan="1" class="reset-cell clickable" style="text-align: center;">-->
-<!--                                            Method-->
-<!--                                        </th>-->
-<!--                                        <th colspan="1" class="reset-cell clickable" style="text-align: center;">Date-->
-<!--                                        </th>-->
-<!--                                        <th class="test-details-cell clickable" colspan="5">Overall</th>-->
-<!--                                    </tr>-->
-<!--                                    <tr>-->
-<!--                                        <th class="sortable clickable" data-sort="string"></th>-->
-<!--                                        <th class="sortable clickable" data-sort="string"></th>-->
-<!--                                        <th class="clickable" data-sort="string">FID⬇</th>-->
-<!--                                        <th class="sortable clickable" data-sort="date">CS⬆</th>-->
-<!--                                        <th class="sortable clickable" data-sort="date">OCR(Acc.)⬆</th>-->
-<!--                                        <th class="sortable clickable" data-sort="date">OCR(F1.)⬆</th>-->
-<!--                                        <th class="sortable clickable" data-sort="date">OCR(Cer.)⬇</th>-->
-<!--                                    </tr>-->
-<!--                                    <tr>-->
-<!--                                        <td>Anytext</td>-->
-<!--                                        <td class="">2023-11-03</td>-->
-<!--                                        <td class="">109.51</td>-->
-<!--                                        <td class="">0.2337</td>-->
-<!--                                        <td class="">0.38</td>-->
-<!--                                        <td class="">0.73</td>-->
-<!--                                        <td class="">0.96</td>-->
-<!--                                    </tr>-->
-<!--                                    <tr>-->
-<!--                                        <td>TextDiffuser2</td>-->
-<!--                                        <td class="">2023-11-16</td>  &lt;!&ndash;日期&ndash;&gt;-->
-<!--                                        <td class="">99.20</td>-->
-<!--                                        <td class="">0.2381</td>-->
-<!--                                        <td class="">0.71</td>-->
-<!--                                        <td class="">1.35</td>-->
-<!--                                        <td class="">0.97</td>-->
-<!--                                    </tr>-->
-<!--                                    <tr>-->
-<!--                                        <td class="">SD3.5 Large</td>-->
-<!--                                        <td class="">2024-06-25</td>  &lt;!&ndash;日期&ndash;&gt;-->
-<!--                                        <td class="">84.79</td>-->
-<!--                                        <td class="">0.2352</td>-->
-<!--                                        <td class="">20.26</td>-->
-<!--                                        <td class="">24.85</td>-->
-<!--                                        <td class="">0.78</td>-->
-<!--                                    </tr>-->
-<!--                                    </thead>-->
-<!--                                </table>-->
-<!--                            </div>-->
-<!--                        </div>-->
+                        th, td {
+                            border: 1px solid #ddd;
+                            padding: 8px;
+                            text-align: center;
+                        }
 
-                        <table id="leadertable-table">
-                            <thead>
-                            <tr>
-                                <th colspan="1" class="reset-cell clickable" style="text-align: center;">
-                                    Method
-                                </th>
-                                <th colspan="1" class="reset-cell clickable" style="text-align: center;">Date
-                                </th>
-                                <th class="" colspan="5">TextVisionBlend</th>
-                            </tr>
-                            <tr>
-                                <th class="sortable clickable" data-sort="string"></th>
-                                <th class="sortable clickable" data-sort="string"></th>
-                                <th class="clickable" data-sort="string">FID⬇</th>
-                                <th class="sortable clickable" data-sort="date">CS⬆</th>
-                                <th class="sortable clickable" data-sort="date">OCR(Acc.)⬆</th>
-                                <th class="sortable clickable" data-sort="date">OCR(F1.)⬆</th>
-                                <th class="sortable clickable" data-sort="date">OCR(Cer.)⬇</th>
-                            </tr>
-                            <tr>
-                                <td class="">Anytext</td>
-                                <td class="">2023-11-03</td>  <!--日期-->
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                            </tr>
-                            <tr>
-                                <td class="">TextDiffuser2</td>
-                                <td class="">2023-11-16</td>  <!--日期-->
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                                <td class="">-</td>
-                            </tr>
-                            <tr>
-                                <td class="">SD3.5 Large</td>
-                                <td class="">2024-06-25</td>  <!--日期-->
-                                <td class="">118.85</td>
-                                <td class="">0.1846</td>
-                                <td class="">14.55</td>
-                                <td class="">16.25</td>
-                                <td class="">0.88</td>
-                            </tr>
-                            </thead>
-                            <!--                            <tbody>-->
-                            <!--                            </tbody>-->
-                        </table>
-                        </br>
-                        <p>Evaluation On TextVisionBlend</p>
-                        </br>
-                        <table id="leadertable-table5">
-                            <thead>
-                            <tr>
-                                <th colspan="1" class="reset-cell clickable" style="text-align: center;">
-                                    Method
-                                </th>
-                                <th colspan="1" class="reset-cell clickable" style="text-align: center;">Date
-                                </th>
+                        th {
+                            background-color: #f2f2f2;
+                        }
 
-                                <th class="" colspan="5">StyledTextSynth</th>
+                        .table-title {
+                            text-align: center;
+                            font-weight: bold;
+                            margin-bottom: 10px;
+                        }
+                    </style>
 
-                            </tr>
-                            <tr>
-                                <th class="sortable clickable" data-sort="string"></th>
-                                <th class="sortable clickable" data-sort="string"></th>
-                                <th class="clickable" data-sort="string">FID⬇</th>
-                                <th class="sortable clickable" data-sort="date">CS⬆</th>
-                                <th class="sortable clickable" data-sort="date">OCR(Acc.)⬆</th>
-                                <th class="sortable clickable" data-sort="date">OCR(F1.)⬆</th>
-                                <th class="sortable clickable" data-sort="date">OCR(Cer.)⬇</th>
-                            </tr>
-                            <tr>
-                                <td class="">Anytext</td>
-                                <td class="">2023-11-03</td>
-                                <td class="">117.71</td>
-                                <td class="">0.2501</td>
-                                <td class="">0.35</td>
-                                <td class="">0.66</td>
-                                <td class="">0.98</td>
-                            </tr>
-                            <tr>
-                                <td class="">TextDiffuser2</td>
-                                <td class="">2023-11-16</td>  <!--日期-->
-                                <td class="">114.31</td>
-                                <td class="">0.2510</td>
-                                <td class="">0.76</td>
-                                <td class="">1.46</td>
-                                <td class="">0.99</td>
-                            </tr>
-                            <tr>
-                                <td class="">SD3.5 Large</td>
-                                <td class="">2024-06-25</td>
-                                <td class="">71.09</td>
-                                <td class="">0.2849</td>
-                                <td class="">27.21</td>
-                                <td class="">33.86</td>
-                                <td class="">0.73</td>
-                            </thead>
-                        </table>
-                        </br>
-                        <p>Evaluation On StyledTextSynth</p>
-                        </br>
-                        <table id="leadertable-table3">
-                            <thead>
-                            <tr>
-                                <th colspan="1" class="reset-cell clickable" style="text-align: center;">
-                                    Method
-                                </th>
-                                <th colspan="1" class="reset-cell clickable" style="text-align: center;">Date
-                                </th>
-                                <th class="" colspan="5">TextScenesHQ</th>
-                            </tr>
-                            <tr>
-                                <th class="sortable clickable" data-sort="string"></th>
-                                <th class="sortable clickable" data-sort="string"></th>
-                                <th class="clickable" data-sort="string">FID⬇</th>
-                                <th class="sortable clickable" data-sort="date">CS⬆</th>
-                                <th class="sortable clickable" data-sort="date">OCR(Acc.)⬆</th>
-                                <th class="sortable clickable" data-sort="date">OCR(F1.)⬆</th>
-                                <th class="sortable clickable" data-sort="date">OCR(Cer.)⬇</th>
-                            </tr>
-                            <tr>
-                                <td>Anytext</td>
-                                <td class="">2023-11-03</td>
-                                <td class="">101.32</td>
-                                <td class="">0.2174</td>
-                                <td class="">0.42</td>
-                                <td class="">0.80</td>
-                                <td class="">0.95</td>
-                            </tr>
-                            <tr>
-                                <td>TextDiffuser2</td>
-                                <td class="">2023-11-16</td>  <!--日期-->
-                                <td class="">84.10</td>
-                                <td class="">0.2252</td>
-                                <td class="">0.66</td>
-                                <td class="">1.25</td>
-                                <td class="">0.96</td>
-                            </tr>
-                            <tr>
-                                <td class="">SD3.5 Large</td>
-                                <td class="">2024-06-25</td>  <!--日期-->
-                                <td class="">64.44</td>
-                                <td class="">0.2363</td>
-                                <td class="">19.03</td>
-                                <td class="">24.45</td>
-                                <td class="">0.73</td>
-                            </tr>
-                            </thead>
-                        </table>
-                        </br>
-                        <p>Evaluation On TextScenesHQ</p>
-                        </br>
-                        <table id="leadertable-table4">
-                            <thead>
-                            <tr>
-                                <th colspan="1" class="reset-cell clickable" style="text-align: center;">
-                                    Method
-                                </th>
-                                <th colspan="1" class="reset-cell clickable" style="text-align: center;">Date
-                                </th>
-                                <th class="" colspan="5">Overall</th>
-                            </tr>
-                            <tr>
-                                <th class="sortable clickable" data-sort="string"></th>
-                                <th class="sortable clickable" data-sort="string"></th>
-                                <th class="clickable" data-sort="string">FID⬇</th>
-                                <th class="sortable clickable" data-sort="date">CS⬆</th>
-                                <th class="sortable clickable" data-sort="date">OCR(Acc.)⬆</th>
-                                <th class="sortable clickable" data-sort="date">OCR(F1.)⬆</th>
-                                <th class="sortable clickable" data-sort="date">OCR(Cer.)⬇</th>
-                            </tr>
-                            <tr>
-                                <td>Anytext</td>
-                                <td class="">2023-11-03</td>
-                                <td class="">109.51</td>
-                                <td class="">0.2337</td>
-                                <td class="">0.38</td>
-                                <td class="">0.73</td>
-                                <td class="">0.96</td>
-                            </tr>
-                            <tr>
-                                <td>TextDiffuser2</td>
-                                <td class="">2023-11-16</td>  <!--日期-->
-                                <td class="">99.20</td>
-                                <td class="">0.2381</td>
-                                <td class="">0.71</td>
-                                <td class="">1.35</td>
-                                <td class="">0.97</td>
-                            </tr>
-                            <tr>
-                                <td class="">SD3.5 Large</td>
-                                <td class="">2024-06-25</td>  <!--日期-->
-                                <td class="">84.79</td>
-                                <td class="">0.2352</td>
-                                <td class="">20.26</td>
-                                <td class="">24.85</td>
-                                <td class="">0.78</td>
-                            </tr>
-                            </thead>
-                        </table>
+                    <div class="grid-container">
+                        <!-- 左上 -->
+                        <div class="grid-item">
+                            <p class="table-title">Evaluation On TextVisionBlend</p>
+                            <table id="leadertable-table1">
+                                <thead>
+                                <tr>
+                                    <th>Method</th>
+                                    <th>Date</th>
+                                    <th>FID⬇</th>
+                                    <th>CS⬆</th>
+                                    <th>OCR(Acc.)⬆</th>
+                                    <th>OCR(F1.)⬆</th>
+                                    <th>OCR(Cer.)⬇</th>
+                                </tr>
+                                </thead>
+                                <tr>
+                                    <td>Anytext</td>
+                                    <td>2023-11-03</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>TextDiffuser2</td>
+                                    <td>2023-11-16</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>SD3.5 Large</td>
+                                    <td>2024-06-25</td>
+                                    <td>118.85</td>
+                                    <td>0.1846</td>
+                                    <td>14.55</td>
+                                    <td>16.25</td>
+                                    <td>0.88</td>
+                                </tr>
+                            </table>
+                        </div>
 
-                        <!--           Base Table             -->
-                        <!--                        <h1>test</h1>-->
-                        <!--                        <table id="leadertable-table">-->
-                        <!--                            <thead>-->
-                        <!--                            <tr>-->
-                        <!--                                <th colspan="1" class="reset-cell clickable" style="text-align: center;">Method</th>-->
-                        <!--                                <th colspan="1" class="reset-cell clickable" style="text-align: center;">Date</th>-->
-                        <!--                                <th class="pro-details-cell clickable" colspan="5">TextVisionBlend</th>-->
-                        <!--                                <th class="val-details-cell clickable" colspan="5">StyledTextSynth</th>-->
-                        <!--                                <th class="test-details-cell clickable" colspan="5">TextScenesHQ</th>-->
-                        <!--                            </tr>-->
-                        <!--                            <tr>-->
-                        <!--                                <th class="sortable clickable" data-sort="string"></th>-->
-                        <!--                                <th class="sortable clickable" data-sort="string"></th>-->
-                        <!--                                <th class="clickable" data-sort="string">FID⬇</th>-->
-                        <!--                                <th class="sortable clickable" data-sort="date">CS⬆</th>-->
-                        <!--                                <th class="sortable clickable" data-sort="date">OCR(Acc.)⬆</th>-->
-                        <!--                                <th class="sortable clickable" data-sort="date">OCR(F1.)⬆</th>-->
-                        <!--                                <th class="sortable clickable" data-sort="date">OCR(Cer.)⬇</th>-->
-                        <!--                                <th class="clickable" data-sort="string">FID⬇</th>-->
-                        <!--                                <th class="sortable clickable" data-sort="date">CS⬆</th>-->
-                        <!--                                <th class="sortable clickable" data-sort="date">OCR(Acc.)⬆</th>-->
-                        <!--                                <th class="sortable clickable" data-sort="date">OCR(F1.)⬆</th>-->
-                        <!--                                <th class="sortable clickable" data-sort="date">OCR(Cer.)⬇</th>-->
-                        <!--                                &lt;!&ndash;                                <th class="sortable clickable" data-sort="string"></th>&ndash;&gt;-->
-                        <!--                                <th class="clickable" data-sort="string">FID⬇</th>-->
-                        <!--                                <th class="sortable clickable" data-sort="date">CS⬆</th>-->
-                        <!--                                <th class="sortable clickable" data-sort="date">OCR(Acc.)⬆</th>-->
-                        <!--                                <th class="sortable clickable" data-sort="date">OCR(F1.)⬆</th>-->
-                        <!--                                <th class="sortable clickable" data-sort="date">OCR(Cer.)⬇</th>-->
-                        <!--                            </tr>-->
-                        <!--                            <tr>-->
-                        <!--                                <td class="">Anytext</td>-->
-                        <!--                                <td class="">2023-11-03</td>  &lt;!&ndash;日期&ndash;&gt;-->
-                        <!--                                <td class="">-</td>-->
-                        <!--                                <td class="">-</td>-->
-                        <!--                                <td class="">-</td>-->
-                        <!--                                <td class="">-</td>-->
-                        <!--                                <td class="">-</td>-->
-                        <!--                                <td class="">117.71</td>-->
-                        <!--                                <td class="">0.2501</td>-->
-                        <!--                                <td class="">0.35</td>-->
-                        <!--                                <td class="">0.66</td>-->
-                        <!--                                <td class="">0.98</td>-->
-                        <!--                                <td class="">101.32</td>-->
-                        <!--                                <td class="">0.2174</td>-->
-                        <!--                                <td class="">0.42</td>-->
-                        <!--                                <td class="">0.80</td>-->
-                        <!--                                <td class="">0.95</td>-->
-                        <!--                            </tr>-->
-                        <!--                            <tr>-->
-                        <!--                                <td class="">TextDiffuser2</td>-->
-                        <!--                                <td class="">2023-11-16</td>  &lt;!&ndash;日期&ndash;&gt;-->
-                        <!--                                <td class="">-</td>-->
-                        <!--                                <td class="">-</td>-->
-                        <!--                                <td class="">-</td>-->
-                        <!--                                <td class="">-</td>-->
-                        <!--                                <td class="">-</td>-->
-                        <!--                                <td class="">114.31</td>-->
-                        <!--                                <td class="">0.2510</td>-->
-                        <!--                                <td class="">0.76</td>-->
-                        <!--                                <td class="">1.46</td>-->
-                        <!--                                <td class="">0.99</td>-->
-                        <!--                                <td class="">84.10</td>-->
-                        <!--                                <td class="">0.2252</td>-->
-                        <!--                                <td class="">0.66</td>-->
-                        <!--                                <td class="">1.25</td>-->
-                        <!--                                <td class="">0.96</td>-->
-                        <!--                            </tr>-->
-                        <!--                            <tr>-->
-                        <!--                                <td class="">SD3.5 Large</td>-->
-                        <!--                                <td class="">2024-06-25</td>  &lt;!&ndash;日期&ndash;&gt;-->
-                        <!--                                <td class="">118.85</td>-->
-                        <!--                                <td class="">0.1846</td>-->
-                        <!--                                <td class="">14.55</td>-->
-                        <!--                                <td class="">16.25</td>-->
-                        <!--                                <td class="">0.88</td>-->
-                        <!--                                <td class="">71.09</td>-->
-                        <!--                                <td class="">0.2849</td>-->
-                        <!--                                <td class="">27.21</td>-->
-                        <!--                                <td class="">33.86</td>-->
-                        <!--                                <td class="">0.73</td>-->
-                        <!--                                <td class="">64.44</td>-->
-                        <!--                                <td class="">0.2363</td>-->
-                        <!--                                <td class="">19.03</td>-->
-                        <!--                                <td class="">24.45</td>-->
-                        <!--                                <td class="">0.73</td>-->
-                        <!--                            </tr>-->
+                        <!-- 右上 -->
+                        <div class="grid-item">
+                            <p class="table-title">Evaluation On StyledTextSynth</p>
+                            <table id="leadertable-table2">
+                                <thead>
+                                <tr>
+                                    <th>Method</th>
+                                    <th>Date</th>
+                                    <th>FID⬇</th>
+                                    <th>CS⬆</th>
+                                    <th>OCR(Acc.)⬆</th>
+                                    <th>OCR(F1.)⬆</th>
+                                    <th>OCR(Cer.)⬇</th>
+                                </tr>
+                                </thead>
+                                <tr>
+                                    <td>Anytext</td>
+                                    <td>2023-11-03</td>
+                                    <td>117.71</td>
+                                    <td>0.2501</td>
+                                    <td>0.35</td>
+                                    <td>0.66</td>
+                                    <td>0.98</td>
+                                </tr>
+                                <tr>
+                                    <td>TextDiffuser2</td>
+                                    <td>2023-11-16</td>
+                                    <td>114.31</td>
+                                    <td>0.2510</td>
+                                    <td>0.76</td>
+                                    <td>1.46</td>
+                                    <td>0.99</td>
+                                </tr>
+                                <tr>
+                                    <td>SD3.5 Large</td>
+                                    <td>2024-06-25</td>
+                                    <td>71.09</td>
+                                    <td>0.2849</td>
+                                    <td>27.21</td>
+                                    <td>33.86</td>
+                                    <td>0.73</td>
+                                </tr>
+                            </table>
+                        </div>
 
-                        <!--                            </thead>-->
-                        <!--                            &lt;!&ndash;                            <tbody>&ndash;&gt;-->
-                        <!--                            &lt;!&ndash;                            </tbody>&ndash;&gt;-->
-                        <!--                        </table>-->
-                        <p class="test-desc"> Metric comparison Overall</p>
+                        <!-- 左下 -->
+                        <div class="grid-item">
+                            <p class="table-title">Evaluation On TextScenesHQ</p>
+                            <table id="leadertable-table3">
+                                <thead>
+                                <tr>
+                                    <th>Method</th>
+                                    <th>Date</th>
+                                    <th>FID⬇</th>
+                                    <th>CS⬆</th>
+                                    <th>OCR(Acc.)⬆</th>
+                                    <th>OCR(F1.)⬆</th>
+                                    <th>OCR(Cer.)⬇</th>
+                                </tr>
+                                </thead>
+                                <tr>
+                                    <td>Anytext</td>
+                                    <td>2023-11-03</td>
+                                    <td>101.32</td>
+                                    <td>0.2174</td>
+                                    <td>0.42</td>
+                                    <td>0.80</td>
+                                    <td>0.95</td>
+                                </tr>
+                                <tr>
+                                    <td>TextDiffuser2</td>
+                                    <td>2023-11-16</td>
+                                    <td>84.10</td>
+                                    <td>0.2252</td>
+                                    <td>0.66</td>
+                                    <td>1.25</td>
+                                    <td>0.96</td>
+                                </tr>
+                                <tr>
+                                    <td>SD3.5 Large</td>
+                                    <td>2024-06-25</td>
+                                    <td>64.44</td>
+                                    <td>0.2363</td>
+                                    <td>19.03</td>
+                                    <td>24.45</td>
+                                    <td>0.73</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- 右下 -->
+                        <div class="grid-item">
+                            <p class="table-title">Metric Comparison Overall</p>
+                            <table id="leadertable-table4">
+                                <thead>
+                                <tr>
+                                    <th>Method</th>
+                                    <th>Date</th>
+                                    <th>FID⬇</th>
+                                    <th>CS⬆</th>
+                                    <th>OCR(Acc.)⬆</th>
+                                    <th>OCR(F1.)⬆</th>
+                                    <th>OCR(Cer.)⬇</th>
+                                </tr>
+                                </thead>
+                                <tr>
+                                    <td>Anytext</td>
+                                    <td>2023-11-03</td>
+                                    <td>109.51</td>
+                                    <td>0.2337</td>
+                                    <td>0.38</td>
+                                    <td>0.73</td>
+                                    <td>0.96</td>
+                                </tr>
+                                <tr>
+                                    <td>TextDiffuser2</td>
+                                    <td>2023-11-16</td>
+                                    <td>99.20</td>
+                                    <td>0.2381</td>
+                                    <td>0.71</td>
+                                    <td>1.35</td>
+                                    <td>0.97</td>
+                                </tr>
+                                <tr>
+                                    <td>SD3.5 Large</td>
+                                    <td>2024-06-25</td>
+                                    <td>84.79</td>
+                                    <td>0.2352</td>
+                                    <td>20.26</td>
+                                    <td>24.85</td>
+                                    <td>0.78</td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
