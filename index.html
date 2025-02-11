@@ -117,7 +117,7 @@
                     </a>
                   </span>
                             <span class="link-block">
-                    <a href=""
+                    <a href="https://github.com/CSU-JinPengGroup"
                        class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fab fa-github"></i>
@@ -125,6 +125,21 @@
                       <span>Code</span>
                     </a>
                   </span>
+
+                <span class="link-block">
+                    <a href="" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon" style="font-size:18px">🤗</span>
+                      <span>TextAtlas5M</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
+                    <a href="" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon" style="font-size:18px">🤗</span>
+                      <span>TextAtlasEval</span>
+                    </a>
+                  </span>
+
+
                             <span class="link-block">
                     <a href=""
                        class="external-link button is-normal is-rounded is-dark">
@@ -162,10 +177,13 @@
     <div class="container is-max-desktop has-text-centered">
         <img src="./static/my_images/text_only_data-1.svg" alt="our observation">
         <div class="text-block">
-        <p>Our observations highlight that previous text-to-image generation methods struggle with rendering dense text.
-        For instance, AnyText
-        renders only a handful of words, while Text Diffuser 2 captures only part of the text.
-        In contrast, GPT-4 with DALL-E 3 demonstrates the best performance in text rendering. </br>
+        <p>Our observations highlight that current text-to-image generation methods <span class="highlight"> struggle with rendering dense text</span>.
+        
+        For example, AnyText and Text Diffuser2, are capable of rendering short text but struggle with longer sequences. 
+        GPT4o with DALLE-3 and SD3.5 Large show superior performance, though they still <span class="highlight"> produce inaccuracies such as duplicated words or missing letters when handling extended text</span>.
+        For interleaved documents, all methods perform poorly due to their lack of layout planning capabilities.
+
+        </br>
         <b>These results underscore that dense-text image generation remains a challenging task for current
             models.</b>
         </p>
@@ -181,7 +199,7 @@
                 <h2 class="title is-3">🔔News</h2>
                 <div class="content has-text-justified">
                     <p>
-                        <b>🔥[2025-02-10] Introducing <a href="#">TextAtlas5M</a>, a dataset designed for training and supplemented with additional test sets for evaluating multimodal generation models. 🚀</b>
+                        <b>🔥[2025-02-12] Introducing <a href="#">TextAtlas5M</a>, a dataset designed for training and supplemented with additional test sets for evaluating multimodal generation models. 🚀</b>
                     </p>
                 </div>
                 </br>
@@ -363,7 +381,7 @@
 <section class="hero is-light is-small">
     <div class="hero-body has-text-centered">
         <h1 class="title is-1 mmmu">
-            <span class="mmmu">TextAtlas5MEval for model evaluation</span>
+            <span class="mmmu">TextAtlasEval for model evaluation</span>
         </h1>
     </div>
 </section>
