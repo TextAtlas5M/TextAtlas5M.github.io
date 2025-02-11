@@ -40,8 +40,11 @@
             padding: 20px;
             border-left: 6px solid #007BFF;
             border-radius: 8px;
+            text-align: left;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            margin: 20px 0;
+            margin: 0 auto;
+            margin-bottom: 30px;
+            max-width: 900px;
         }
 
         .highlight {
@@ -78,12 +81,12 @@
                   <a href="https://openreview.net/profile?id=~Alex_Jinpeng_Wang1"
                      style="text-decoration: none; color: inherit;">Alex Jinpeng Wang</a>,
                 </span>
+                <span class="author-block">
+                  <a href="https://scholar.google.com/citations?user=RLVSYY0AAAAJ&hl=en"
+                     style="text-decoration: none; color: inherit;">Dongxing Mao</a>,
                         <span class="author-block">
                   Jiawei Zhang,
                 </span>
-                        <span class="author-block">
-                  <a href="https://scholar.google.com/citations?user=RLVSYY0AAAAJ&hl=en"
-                     style="text-decoration: none; color: inherit;">Dongxing Mao</a>,
                 </span>
                         <br>
                         <span class="author-block">Weiming Han,</span>
@@ -117,7 +120,7 @@
                     </a>
                   </span>
                             <span class="link-block">
-                    <a href="https://github.com/CSU-JinPengGroup"
+                    <a href="https://github.com/CSU-JinPengGroup/TextAtlas/tree/main"
                        class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fab fa-github"></i>
@@ -177,7 +180,7 @@
     <div class="container is-max-desktop has-text-centered">
         <img src="./static/my_images/text_only_data-1.svg" alt="our observation">
         <div class="text-block">
-        <p>Our observations highlight that current text-to-image generation methods <span class="highlight"> struggle with rendering dense text</span>.
+        <p>Current text-to-image generation methods <span class="highlight"> struggle with rendering dense text</span>.
         
         For example, AnyText and Text Diffuser2, are capable of rendering short text but struggle with longer sequences. 
         GPT4o with DALLE-3 and SD3.5 Large show superior performance, though they still <span class="highlight"> produce inaccuracies such as duplicated words or missing letters when handling extended text</span>.
@@ -199,25 +202,38 @@
                 <h2 class="title is-3">🔔News</h2>
                 <div class="content has-text-justified">
                     <p>
-                        <b>🔥[2025-02-12] Introducing <a href="#">TextAtlas5M</a>, a dataset designed for training and supplemented with additional test sets for evaluating multimodal generation models. 🚀</b>
+                        <b>🔥[2025-02-12] We introduce <a href="#">TextAtlas5M</a>, a dataset specifically designed for training and evaluating multimodal generation models on dense-text image generation. 🚀</b>
                     </p>
                 </div>
                 </br>
                 <h2 class="title is-3">Introduction</h2>
                 <div class="content has-text-justified">
-                    <div class="text-block">
+<!--                     <div class="text-block">
                     <p>
-                        We present TextAtlas5M, <b>a large-scale benchmark for text-conditioned
+                        We present TextAtlas5M, <b>a large-scale dataset for text-conditioned
                         image generation, focusing on text-rich images. </b>The
                         dataset includes three levels of synthetic data and a
                         diverse collection of real images, curated from widely
                         relevant real-world topics.
                     </p>
+                </div> -->
+
+                <div class="text-block">
+                    <p>
+                        <span class="highlight">TextAtlas5M</span> focus on generating <span class="key-feature">dense-text images</span> and stands out in several key ways compared to previous text-rich datasets.
+                        Unlike earlier datasets, which primarily focus on <span class="key-feature">short and simple text</span>, 
+                        <span class="highlight">TextAtlas5M</span> includes a diverse and complex range of data. 
+                        It spans from <span class="key-feature">interleaved documents</span> and <span class="key-feature">synthetic data</span> 
+                        to <span class="key-feature">real-world images containing dense text</span>, offering a more varied 
+                        and challenging set of examples. Moreover, our dataset features <span class="challenge">longer text captions</span>, 
+                        which pose additional challenges for models, and includes <span class="challenge">human annotations</span> 
+                        for particularly difficult examples, ensuring a more thorough evaluation of model capabilities.
+                    </p>
                 </div>
                     <img src="./static/my_images/compare.jpg" alt="algebraic reasoning" class="center" style="width: 100%; height: auto;">
                     <div class="text-block">
                     <p>
-                        We design <b>a dedicated test set </b>to address the longstanding gap in metrics
+                        We design a dedicated test benchmark  <b>TextAtlasEval</b> to address the longstanding gap in metrics
                         for evaluating long-text information in image generation. By requiring models to effectively
                         process and
                         generate longer text, TextAtlas5M sets itself apart from
@@ -245,7 +261,7 @@
     <div class="hero-body has-text-centered">
         <h1 class="title is-1 mmmu">
 
-            <span class="mmmu">TextAtlas5M Training Set</span>
+            <span class="mmmu">TextAtlas5M (Training Dataset)</span>
         </h1>
     </div>
 </section>
@@ -256,49 +272,37 @@
             <div class="column is-four-fifths">
                 <h2 class="title is-3">Overview</h2>
                 <div class="content has-text-justified">
-                    <div class="text-block">
-                    <p>
-                        We introduce <span class="highlight">TextAtlas5M</span>, a comprehensive dataset designed to advance and evaluate
-                        text-to-image generation models, with a particular focus on generating <span class="key-feature">dense-text images</span>. 
-                        <span class="highlight">TextAtlas5M</span> stands out in several key ways compared to previous text-rich datasets.
-                        Unlike earlier datasets, which primarily focus on <span class="key-feature">short and simple text</span>, 
-                        <span class="highlight">TextAtlas5M</span> includes a diverse and complex range of data. 
-                        It spans from <span class="key-feature">interleaved documents</span> and <span class="key-feature">synthetic data</span> 
-                        to <span class="key-feature">real-world images containing dense text</span>, offering a more varied 
-                        and challenging set of examples. Moreover, our dataset features <span class="challenge">longer text captions</span>, 
-                        which pose additional challenges for models, and includes <span class="challenge">human annotations</span> 
-                        for particularly difficult examples, ensuring a more thorough evaluation of model capabilities.
-                    </p>
-                </div>
                    <img src="./static/my_images/intro_dataset-1.svg" alt="algebraic reasoning" class="center" style="width: 100%; height: auto;">
                     <br>
-                    <div class="text-block">
-                <p>
-                    The synthetic subset progresses through <span class="key-feature">three levels of complexity</span>, starting with 
-                    <span class="key-feature">simple text</span> on clean backgrounds. It then advances to 
-                    <span class="key-feature">interleaved data</span>, blending text with visual elements, and culminates in 
-                    <span class="key-feature">synthetic natural images</span>, where realistic scenes integrate seamlessly with text.
-                </p>
-            </div>
+                <div class="text-block">
+                    <h3>Synthetic Data</h3>
+                    <h4>CleanTextSynth, TextVisionBlend, StyledTextSynth</h4>
+                    <p>
+                        The synthetic subset progresses through <span class="key-feature">three levels of complexity</span>, starting with 
+                        <span class="key-feature">simple text</span> on clean backgrounds. It then advances to 
+                        <span class="key-feature">interleaved data</span>, blending text with visual elements, and culminates in 
+                        <span class="key-feature">synthetic natural images</span>, where realistic scenes integrate seamlessly with text.
+                    </p>
+                </div>
+
 
                 <div class="text-block">
+                    <h3>Real Data</h3>
+                    <h4>The other subsets</h4>
                     <p>
                         The real image subset captures diverse, real-world <span class="key-feature">dense text scenarios</span>. It includes 
                         filtered samples from datasets like <span class="highlight">AnyText</span> and <span class="highlight">TextDiffuser</span>, 
                         detailed descriptions from PowerPoint slides, book covers, and academic PDF papers.
                     </p>
                     <p>
-                        To enrich diversity, we also gather dense text images guided by predefined topics from 
-                        <span class="highlight">CommonCrawl1</span> and <span class="highlight">LAION-5B</span>. 
+                        To enrich diversity, we also gather dense text images guided by predefined topics. 
                         To assess the capability of models in dense text image generation, we introduce a dedicated test set, 
                         <span class="highlight">TextAtlas5MEval</span>, designed for comprehensive evaluation.
-                    </p>
-                    <p>
                         This test set spans <span class="key-feature">four distinct data types</span>, ensuring diversity across domains 
                         and enhancing the relevance of <span class="highlight">TextAtlas5M</span> for real-world applications.
                     </p>
                 </div>
-
+                    <h2 class="title is-3" style="text-align: center;">Subset Example</h2>
                     <img src="./static/my_images/data-display-overall-w-ann-v2.svg" alt="algebraic reasoning" class="center" style="width: 100%; height: auto;">
                 </div>
             </div>
@@ -381,31 +385,32 @@
 <section class="hero is-light is-small">
     <div class="hero-body has-text-centered">
         <h1 class="title is-1 mmmu">
-            <span class="mmmu">TextAtlasEval for model evaluation</span>
+            <span class="mmmu">TextAtlasEval (Evaluate Benchmark)</span>
         </h1>
     </div>
 </section>
 <section class="section">
     <div class="container">
-        <div class="text-block">
-        <p>To evaluate the dense-text image generation ability for existing model, we further propose TextAtlas5MEval.
-            Adopting stratified random sampling weighted by subset complexity levels: 33% from advanced synthetic tiers
-            (Styled-TextSynth), 33% from real-world professional domains
-            TextScenesHQ, and 33% from web-sourced interleaved
-            TextVisionBlend coverage of both controlled and organic
-            scenarios.</p>
-        </br>
-        <p>
-            For the StyledTextSynth and TextScenesHQ subsets, we
-            sample data from each topic to ensure the evaluation set
-            covers a wide range of topics. For TextVisionBlend we perform random sampling to obtain the samples, and we
-            finally get a test set with 3000 samples. In this way, our
-            dataset cover different domain of data which allowing us to
-            assess the capabilities of model across multiple dimensions.
-        </p>
+        <div class="content has-text-justified">
+            <div class="text-block">
+                <p>To evaluate the dense-text image generation ability for existing model, we further propose TextAtlas5MEval.
+                    Adopting stratified random sampling weighted by subset complexity levels: 33% from advanced synthetic tiers
+                    (Styled-TextSynth), 33% from real-world professional domains
+                    TextScenesHQ, and 33% from web-sourced interleaved
+                    TextVisionBlend coverage of both controlled and organic
+                    scenarios.</p>
+                <br>
+                <p>
+                    For the StyledTextSynth and TextScenesHQ subsets, we
+                    sample data from each topic to ensure the evaluation set
+                    covers a wide range of topics. For TextVisionBlend we perform random sampling to obtain the samples, and we
+                    finally get a test set with 3000 samples. In this way, our
+                    dataset cover different domain of data which allowing us to
+                    assess the capabilities of model across multiple dimensions.
+                </p>
+            </div>
+        </div>
     </div>
-    </div>
-
 </section>
 
 
@@ -520,6 +525,8 @@
                             </table>
                         </div>
 
+<img src="./static/my_images/text_only_data_spcial_case_one_sample-1.svg" alt="arithmetic reasoning" width="100%" height="100%"/>
+
                         <!-- 右上 -->
                         <div class="grid-item">
                             <p class="table-title">Evaluation On StyledTextSynth</p>
@@ -608,15 +615,6 @@
                                     <td>0.73</td>
                                 </tr>
                                 <tr>
-                                    <td>PixArt-Sigma</td>
-                                    <td>2024-03-27</td>
-                                    <td>72.62</td>
-                                    <td>0.2347</td>
-                                    <td>0.34</td>
-                                    <td>0.53</td>
-                                    <td>0.91</td>
-                                </tr>
-                                <tr>
                                     <td>Infinity-2B</td>
                                     <td>2024-12-05</td>
                                     <td>71.59</td>
@@ -626,13 +624,13 @@
                                     <td>0.88</td>
                                 </tr>
                                 <tr>
-                                    <td>Anytext</td>
-                                    <td>2023-11-03</td>
-                                    <td>101.32</td>
-                                    <td>0.2174</td>
-                                    <td>0.42</td>
-                                    <td>0.80</td>
-                                    <td>0.95</td>
+                                    <td>PixArt-Sigma</td>
+                                    <td>2024-03-27</td>
+                                    <td>72.62</td>
+                                    <td>0.2347</td>
+                                    <td>0.34</td>
+                                    <td>0.53</td>
+                                    <td>0.91</td>
                                 </tr>
                                 <tr>
                                     <td>TextDiffuser2</td>
@@ -642,6 +640,15 @@
                                     <td>0.66</td>
                                     <td>1.25</td>
                                     <td>0.96</td>
+                                </tr>
+                                <tr>
+                                    <td>Anytext</td>
+                                    <td>2023-11-03</td>
+                                    <td>101.32</td>
+                                    <td>0.2174</td>
+                                    <td>0.42</td>
+                                    <td>0.80</td>
+                                    <td>0.95</td>
                                 </tr>
                             </table>
                         </div>
@@ -687,9 +694,17 @@
 
             </div>
         </div> -->
+
+<section class="hero is-light is-small">
+    <div class="hero-body has-text-centered">
+        <h1 class="title is-1 mmmu">
+            <span class="mmmu" id="examples">More Examples</span>
+        </h1>
+    </div>
+</section>
+
         <div class="columns is-centered m-6">
             <div class="column is-full has-text-centered content">
-                <h2 class="title is-3" id="examples">More Examples</h2>
                 <div class="carousel results-carousel">
                     <!-- <div class="box m-5">
                         <div class="content has-text-centered">
@@ -741,11 +756,21 @@
 </section>
 
 
+<section class="hero is-light is-small">
+    <div class="hero-body has-text-centered">
+        <h1 class="title is-1 mmmu">
+            <span class="mmmu">Potential Applications</span>
+        </h1>
+    </div>
+</section>
+
+
 <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
-        <h2 class="title is-3 has-text-centered">Potential Applications</h2>
         <ul class="application-list">
-            <li>📌 Interleaved PowerPoint Generation</li>
+            <li>📌 Interleaved PowerPoint/Wiki-Document Generation</li>
+            <img src="./static/my_images/ppt_example.jpg" alt="grade-lv" width="40%" style="margin-right: 20px; margin-left: 20px;"/>
+            <img src="./static/my_images/wiki_example.png" alt="grade-lv" width="35%"/>
             <li>📌 Text-customized Image Generation</li>
         </ul>
     </div>
@@ -773,7 +798,7 @@
         <pre><code>
         @inproceedings{wang2025large,
             title={A Large-scale Dataset for Dense Text Image Generation},
-            author={ Alex Jinpeng Wang and  Jiawei Zhang and Dongxing Mao and weiming Han and Zhuobai Dong and Linjie Li and Yiqi Lin and Zhengyuan Yang and Libo Qin and Fuwei Zhang and Lijuan Wang and Min Li},
+            author={Alex Jinpeng Wang and Dongxing Mao and  Jiawei Zhang and weiming Han and Zhuobai Dong and Linjie Li and Yiqi Lin and Zhengyuan Yang and Libo Qin and Fuwei Zhang and Lijuan Wang and Min Li},
             booktitle={Arxiv},
             year={2024},
         }
