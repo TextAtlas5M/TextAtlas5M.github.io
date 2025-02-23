@@ -194,7 +194,7 @@
 
 <section class="hero teaser">
     <div class="container is-max-desktop has-text-centered">
-        <img src="./static/my_images/text_only_data-1.svg" alt="our observation">
+        <img src="./static/my_images/text_only_data_add_grok.svg" alt="our observation">
         <div class="text-block">
         <p>Current text-to-image generation methods <span class="highlight"> struggle with rendering dense text</span>.
         
@@ -517,6 +517,82 @@
                     </style>
 
                     <div class="grid-container">
+
+                                                <!-- 左下 -->
+                                                <div class="grid-item">
+                                                    <p class="table-title">Evaluation On TextScenesHQ</p>
+                                                    <table id="leadertable-table3">
+                                                        <thead>
+                                                        <tr>
+                                                            <th>Method</th>
+                                                            <th>Date</th>
+                                                            <th>FID⬇</th>
+                                                            <th>CS⬆</th>
+                                                            <th>OCR(Acc.)⬆</th>
+                                                            <th>OCR(F1.)⬆</th>
+                                                            <th>OCR(Cer.)⬇</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tr>
+                                                            <td>Grok3</td>
+                                                            <td>2025-02-19</td>
+                                                            <td><strong>-</strong></td>
+                                                            <td><strong>0.3197</strong></td>
+                                                            <td><strong>35.07</strong></td>
+                                                            <td><strong>37.94</strong></td>
+                                                            <td><strong>0.57</strong></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>SD3.5 Large</td>
+                                                            <td>2024-06-25</td>
+                                                            <td><strong>64.44</strong></td>
+                                                            <td>0.2363</td>
+                                                            <td>19.03</td>
+                                                            <td>24.45</td>
+                                                            <td>0.73</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Infinity-2B</td>
+                                                            <td>2024-12-05</td>
+                                                            <td>71.59</td>
+                                                            <td>0.2346</td>
+                                                            <td>1.06</td>
+                                                            <td>1.74</td>
+                                                            <td>0.88</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>PixArt-Sigma</td>
+                                                            <td>2024-03-27</td>
+                                                            <td>72.62</td>
+                                                            <td>0.2347</td>
+                                                            <td>0.34</td>
+                                                            <td>0.53</td>
+                                                            <td>0.91</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>TextDiffuser2</td>
+                                                            <td>2023-11-16</td>
+                                                            <td>84.10</td>
+                                                            <td>0.2252</td>
+                                                            <td>0.66</td>
+                                                            <td>1.25</td>
+                                                            <td>0.96</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Anytext</td>
+                                                            <td>2023-11-03</td>
+                                                            <td>101.32</td>
+                                                            <td>0.2174</td>
+                                                            <td>0.42</td>
+                                                            <td>0.80</td>
+                                                            <td>0.95</td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                        
+                                                <img src="./static/my_images/text_only_data_high-1.svg" alt="arithmetic reasoning" width="100%" height="100%"/>
+ 
+                                                
                         <!-- 左上 -->
                         <div class="grid-item">
                             <p class="table-title">Evaluation On TextVisionBlend</p>
@@ -533,22 +609,13 @@
                                 </tr>
                                 </thead>
                                 <tr>
-                                    <td>PixArt-Sigma</td>
-                                    <td>2024-03-27</td>
-                                    <td>81.29</td>
-                                    <td>0.1891</td>
-                                    <td>2.40</td>
-                                    <td>1.57</td>
-                                    <td>0.83</td>
-                                </tr>
-                                <tr>
-                                    <td>Infinity-2B</td>
-                                    <td>2024-12-05</td>
-                                    <td>95.69</td>
-                                    <td>0.1979</td>
-                                    <td>2.98</td>
-                                    <td>3.44</td>
-                                    <td>0.83</td>
+                                    <td>Grok3</td>
+                                    <td>2025-02-19</td>
+                                    <td>-</td>
+                                    <td>0.1697</td>
+                                    <td><strong>41.54</strong></td>
+                                    <td><strong>44.22</strong></td>
+                                    <td><strong>0.57</strong></td>
                                 </tr>
                                 <tr>
                                     <td>SD3.5 Large</td>
@@ -559,10 +626,28 @@
                                     <td>16.25</td>
                                     <td>0.88</td>
                                 </tr>
+                                <tr>
+                                    <td>PixArt-Sigma</td>
+                                    <td>2024-03-27</td>
+                                    <td><strong>81.29</strong></td>
+                                    <td>0.1891</td>
+                                    <td>2.40</td>
+                                    <td>1.57</td>
+                                    <td><strong>0.83</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Infinity-2B</td>
+                                    <td>2024-12-05</td>
+                                    <td>95.69</td>
+                                    <td>0.1979</td>
+                                    <td>2.98</td>
+                                    <td>3.44</td>
+                                    <td><strong>0.83</strong></td>
+                                </tr>
                             </table>
                         </div>
 
-<img src="./static/my_images/text_only_data_spcial_case_one_sample-1.svg" alt="arithmetic reasoning" width="100%" height="100%"/>
+<img src="./static/my_images/siyuanzu_interleave-1.svg" alt="arithmetic reasoning" width="100%" height="100%"/>
 
                         <!-- 右上 -->
                         <div class="grid-item">
@@ -582,12 +667,21 @@
                                 <tr>
                                     <td>SD3.5 Large</td>
                                     <td>2024-06-25</td>
-                                    <td>71.09</td>
+                                    <td><strong>71.09</strong></td>
                                     <td>0.2849</td>
-                                    <td>27.21</td>
-                                    <td>33.86</td>
-                                    <td>0.73</td>
+                                    <td><strong>27.21</strong></td>
+                                    <td><strong>33.86</strong></td>
+                                    <td><strong>0.73</strong></td>
                                 </tr>
+                                <!-- <tr>
+                                    <td>Grok3</td>
+                                    <td>2025-02-19</td>
+                                    <td>80.33</td>
+                                    <td><strong>0.2854</strong></td>
+                                    <td>15.82</td>
+                                    <td>21.40</td>
+                                    <td><strong>0.73</strong></td>
+                                </tr> -->
                                 <tr>
                                     <td>PixArt-Sigma</td>
                                     <td>2024-03-27</td>
@@ -627,71 +721,6 @@
                             </table>
                         </div>
 <img src="./static/my_images/text_only_data_mid-1.svg" alt="arithmetic reasoning" width="100%" height="100%"/>
-                        <!-- 左下 -->
-                        <div class="grid-item">
-                            <p class="table-title">Evaluation On TextScenesHQ</p>
-                            <table id="leadertable-table3">
-                                <thead>
-                                <tr>
-                                    <th>Method</th>
-                                    <th>Date</th>
-                                    <th>FID⬇</th>
-                                    <th>CS⬆</th>
-                                    <th>OCR(Acc.)⬆</th>
-                                    <th>OCR(F1.)⬆</th>
-                                    <th>OCR(Cer.)⬇</th>
-                                </tr>
-                                </thead>
-                                <tr>
-                                    <td>SD3.5 Large</td>
-                                    <td>2024-06-25</td>
-                                    <td>64.44</td>
-                                    <td>0.2363</td>
-                                    <td>19.03</td>
-                                    <td>24.45</td>
-                                    <td>0.73</td>
-                                </tr>
-                                <tr>
-                                    <td>Infinity-2B</td>
-                                    <td>2024-12-05</td>
-                                    <td>71.59</td>
-                                    <td>0.2346</td>
-                                    <td>1.06</td>
-                                    <td>1.74</td>
-                                    <td>0.88</td>
-                                </tr>
-                                <tr>
-                                    <td>PixArt-Sigma</td>
-                                    <td>2024-03-27</td>
-                                    <td>72.62</td>
-                                    <td>0.2347</td>
-                                    <td>0.34</td>
-                                    <td>0.53</td>
-                                    <td>0.91</td>
-                                </tr>
-                                <tr>
-                                    <td>TextDiffuser2</td>
-                                    <td>2023-11-16</td>
-                                    <td>84.10</td>
-                                    <td>0.2252</td>
-                                    <td>0.66</td>
-                                    <td>1.25</td>
-                                    <td>0.96</td>
-                                </tr>
-                                <tr>
-                                    <td>Anytext</td>
-                                    <td>2023-11-03</td>
-                                    <td>101.32</td>
-                                    <td>0.2174</td>
-                                    <td>0.42</td>
-                                    <td>0.80</td>
-                                    <td>0.95</td>
-                                </tr>
-                            </table>
-                        </div>
-
-                        <img src="./static/my_images/text_only_data_high-1.svg" alt="arithmetic reasoning" width="100%" height="100%"/>
- 
                     </div>
 
                 </div>
