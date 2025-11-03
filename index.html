@@ -195,9 +195,34 @@
 <section class="hero teaser">
     <div class="container is-max-desktop has-text-centered">
         <img src="./static/my_images/text_only_data_gpt4o.jpg" alt="our observation">
+                    <!-- Add leaderboard comparison figures -->
+<div class="leaderboard-gallery">
+    <p style="margin-top:1em; font-weight:600; font-size:1.05em;">
+      Evaluation on <span class="highlight">TextAtlasEval</span> across four subsets:
+    </p>
+    <div class="grid">
+      <figure>
+        <img src="./static/my_images/CleanTextSynth_leaderboard.png" alt="CleanTextSynth results">
+        <figcaption>CleanTextSynth</figcaption>
+      </figure>
+      <figure>
+        <img src="./static/my_images/TextVisionBlend_leaderboard.png" alt="TextVisionBlend results">
+        <figcaption>TextVisionBlend</figcaption>
+      </figure>
+      <figure>
+        <img src="./static/my_images/StyledTextSynth_leaderboard.png" alt="StyledTextSynth results">
+        <figcaption>StyledTextSynth</figcaption>
+      </figure>
+      <figure>
+        <img src="./static/my_images/TextScenesHQ_leaderboard.png" alt="TextScenesHQ results">
+        <figcaption>TextScenesHQ</figcaption>
+      </figure>
+    </div>
+  </div>
         <div class="text-block">
         <p>Current text-to-image generation methods <span class="highlight"> struggle with rendering dense text</span>.
         
+
         For example, AnyText and Text Diffuser2, are capable of rendering short text but struggle with longer sequences. 
         GPT4o with DALLE-3 and SD3.5 Large show superior performance, though they still <span class="highlight"> produce inaccuracies such as duplicated words or missing letters when handling extended text</span>.
         For interleaved documents, all methods perform poorly due to their lack of layout planning capabilities.
@@ -950,6 +975,28 @@
         font-weight: bold;
         color: #333;
     }
+
+    .leaderboard-gallery .grid {
+  display: flex;
+  flex-direction: column;   /* 垂直堆叠 */
+  gap: 2rem;                /* 图之间的间距 */
+  margin-top: 1rem;
+}
+
+.leaderboard-gallery img {
+  width: 90%;               /* 让图片稍微有留白 */
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.leaderboard-gallery figcaption {
+  text-align: center;
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 0.5em;
+}
+
 </style>
 
 <!-- add a contact section  -->
